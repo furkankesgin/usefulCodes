@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Sort Text By Length of Lines</title>
+<link href="css/layout3col.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/strsup.js"></script>
+<script type="text/javascript">
+
+function sortLinesByLen() {
+   reverseit=(document.getElementById('chkDesc')).checked;       
+   var a = document.getElementById('txt1').value.split(/\r\n|\r|\n/);
+   if((a.length>1)&&(a[a.length-1]=='')){
+      a.splice(-1,1); // delete last empty line
+   }
+   var length_comp = function (a, b) { return (a.length - b.length) * (reverseit ? -1:1) };
+   a.sort(length_comp);
+   document.getElementById('txtNew').value = a.join("\n");
+}
+
+</script>
+</head>
+<body onload="document.getElementById('btnRun').click()">
+<div class="heading"><h1>Sort Lines By Length</h1></div>
+
+<div class="container">
+<div class="leftnew">
+        <a href="/">ReformatText Home</a><br/>
+<br/>
+<br/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Downsides Wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-2674404638298268"
+     data-ad-slot="2020261410"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="rightnew">
+<!-- advertising goes here -->
+   <br/>
+
+<br/>
+
+</div>
+<div class="middlenew">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2674404638298268";
+/* Downsides Wide */
+google_ad_slot = "4850643811";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<p>
+Use this tool to sort lines of text by the length of each line. 
+</p>
+<form method="get" id="form1" name="form1">
+
+<input type="button" value="Clear" onclick="document.getElementById('txt1').value=''">
+<br/>
+<textarea id="txt1" name="txt1" class="notes" rows="10" cols="80" wrap="off">Paste or enter your text here.
+Wow.
+This is fun.
+</textarea>
+<br/>
+
+<input type="button" id="btnRun" onclick="sortLinesByLen()" value="Sort Lines By Length">
+    <label><input type="checkbox" id="chkDesc" value="Y">Descending Order</label>
+<br/>
+Result Below:<br/>
+<textarea id="txtNew" rows="10" cols="80" wrap="off"></textarea>
+</form>
+</div>
+<div class="footer">
+<hr class="fatline"/>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2674404638298268";
+/* Downsides Wide */
+google_ad_slot = "4850643811";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br/>
+<b>Copyright &copy; 2013 - 2020 <a href="https://www.ddginc-usa.com/">Data Design Group, Inc.</a> All Rights Reserved</b>
+</div>
+</div>
+</body>
+</html>
+</body>
+</html>
